@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+
+div {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px -3px;
+}
+
+.spinner-container {
+  position: absolute;
+  top: 20px;
+  right: 50%;
+  display: flex;
+}
+
+.spinner-container svg {
+  margin: auto;
+}
+
+.spinner-container .spinner {
+  fill: none;
+  stroke-width: 8px;
+  stroke-dasharray: 215px 72px;
+  animation: spin 1.8s, rotate 3.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out, linear;
+  transform-origin: center;
+  &.stop-animate {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes spin {
+  50% {
+    stroke-dasharray: 22px 265px;
+    stroke-dashoffset: -287px;
+  }
+  to {
+    stroke-dasharray: 215px 72px;
+    stroke-dashoffset: -287px;
+  }
+}
+
+@keyframes rotate {
+    to {
+        rotate: 360deg;
+    }
+}
