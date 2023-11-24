@@ -1,1 +1,1 @@
-#Spinner
+# Spinner by svg and css
